@@ -97,4 +97,44 @@ Feature('Test null-writable module', () => {
       return finished.should.be.true
     })
   })
+
+  Scenario('Pipe readable with error to writable', () => {
+    let ended = false
+    let errored = false
+    let readable
+    let writable
+
+    Given('readable stream', () => {
+      readable = new MyReadable({ name: 'readable', lines: 10, withError: true })
+    })
+
+    And('writable stream', () => {
+      writable = new NullWritable()
+    })
+
+    When('waiting for end event from readable', () => {
+      readable.once('end', () => {
+        ended = true
+      })
+    })
+
+    And('waiting for error event from readable', () => {
+      readable.once('error', (err) => {
+        errored = err
+      })
+    })
+
+    And('readable is piped to writable', (done) => {
+      readable.once('error', (_err) => done())
+      readable.pipe(writable)
+    })
+
+    Then('readable is not ended', () => {
+      return ended.should.be.false
+    })
+
+    And('writable is ended', () => {
+      return errored.should.be.an.instanceof(Error)
+    })
+  })
 })
