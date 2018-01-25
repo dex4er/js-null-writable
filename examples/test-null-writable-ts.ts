@@ -1,7 +1,6 @@
 #!/usr/bin/env ts-node
 
 import * as fs from 'fs'
-import { Readable } from 'stream'
 
 import { NullWritable } from '../lib/null-writable'
 
