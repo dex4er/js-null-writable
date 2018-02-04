@@ -21,13 +21,13 @@ npm install null-writable
 ### Usage
 
 ```js
-const { NullWritable } = require('null-writable')
+const NullWritable = require('null-writable')
 ```
 
 _Typescript:_
 
 ```ts
-import { NullWritable } from 'null-writable'
+import NullWritable from 'null-writable'
 ```
 
 #### constructor
@@ -42,6 +42,6 @@ Options are the same as for `Writable` constructor, like ie. `highWaterMark`.
 
 ### License
 
-Copyright (c) 2016-2017 Piotr Roszatycki <piotr.roszatycki@gmail.com>
+Copyright (c) 2018 Piotr Roszatycki <piotr.roszatycki@gmail.com>
 
 [MIT](https://opensource.org/licenses/MIT)

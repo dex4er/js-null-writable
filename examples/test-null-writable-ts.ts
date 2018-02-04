@@ -1,8 +1,8 @@
 #!/usr/bin/env ts-node
 
-import * as fs from 'fs'
+import fs from 'fs'
 
-import { NullWritable } from '../lib/null-writable'
+import NullWritable from '../lib/null-writable'
 
 function main () {
   const filename = process.argv[1] || '/etc/hosts'

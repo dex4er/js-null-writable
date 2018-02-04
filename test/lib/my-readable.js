@@ -20,4 +20,4 @@ class MyReadable extends Readable {
   }
 }
 
-module.exports = { MyReadable: MyReadable }
+module.exports = MyReadable

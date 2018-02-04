@@ -8,10 +8,10 @@ const chaiAsPromised = require('chai-as-promised')
 chai.use(chaiAsPromised)
 chai.should()
 
-Feature('Test null-writable module', () => {
-  const MyReadable = require('./lib/my-readable').MyReadable
-  const NullWritable = require('../lib/null-writable').NullWritable
+const MyReadable = require('./lib/my-readable')
+const NullWritable = require('../lib/null-writable')
 
+Feature('Test null-writable module', () => {
   Scenario('Write a line to writable', () => {
     let canWrite = false
     let writable
