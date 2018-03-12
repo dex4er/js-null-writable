@@ -1,6 +1,6 @@
 {
   "name": "null-writable",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Null writable stream",
   "main": "lib/null-writable.js",
   "typings": "lib/null-writable.d.ts",
@@ -26,6 +26,7 @@
     "@types/node": "^9.3.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
+    "markdownlint-cli": "^0.7.1",
     "onchange": "^3.3.0",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
@@ -36,13 +37,10 @@
     "typescript": "^2.7.1"
   },
   "scripts": {
-    "pretest": "standard --verbose | snazzy && tsc --noEmit --pretty && tslint -t stylish -p .",
+    "pretest": "standard --verbose | snazzy && tsc --noEmit --pretty && tslint -t stylish -p . && markdownlint *.md",
     "test": "tap test/*.js",
     "test:coverage": "npm test -- --coverage",
-    "test:onchange:lcovonly": "npm run -s test-coverage -- -R min --coverage-report lcovonly; onchange '**/*.js' -- npm run -s test-coverage -- -R min --coverage-report lcovonly",
-    "update": "npm run update:upgrade && npm run update:reinstall",
-    "update:upgrade": "ncu --upgrade --upgradeAll",
-    "update:reinstall": "rm -f package-lock.json && rm -rf node_modules && npm cache clear --force && npm install"
+    "test:onchange:lcovonly": "npm run -s test-coverage -- -R min --coverage-report lcovonly; onchange '**/*.js' -- npm run -s test-coverage -- -R min --coverage-report lcovonly"
   },
   "standard": {
     "globals": [
