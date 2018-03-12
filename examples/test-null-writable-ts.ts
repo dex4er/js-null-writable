@@ -4,7 +4,7 @@ import fs from 'fs'
 
 import NullWritable from '../lib/null-writable'
 
-function main () {
+function main (): void {
   const filename = process.argv[1] || '/etc/hosts'
   const readableStream = fs.createReadStream(filename)
 
