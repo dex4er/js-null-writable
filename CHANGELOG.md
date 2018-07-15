@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.2 2018-07-15
+
+* npm audit clean
+
 ## v0.2.1 2018-03-12
 
 * Use markdownlint.
