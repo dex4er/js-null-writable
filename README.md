@@ -20,6 +20,12 @@ This module requires Node >= 4.
 npm install null-writable
 ```
 
+_Additionally for Typescript:_
+
+```shell
+npm install -D @types/node
+```
+
 ## Usage
 
 ```js
