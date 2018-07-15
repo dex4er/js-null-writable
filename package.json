@@ -11,7 +11,8 @@
   "keywords": [
     "null",
     "stream",
-    "writable"
+    "writable",
+    "writev"
   ],
   "author": "Piotr Roszatycki",
   "license": "MIT",
@@ -26,8 +27,13 @@
     "@types/node": "^10.5.2",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "markdownlint-cli": "^0.11.0",
-    "snazzy": "^7.1.1",
     "standard": "^11.0.1",
     "tap": "^12.0.1",
     "tap-given": "^0.6.0",
