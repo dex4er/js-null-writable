@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.0 2018-07-15
+
+* Do not export `default` symbol.
+
 ## v0.2.2 2018-07-15
 
 * npm audit clean

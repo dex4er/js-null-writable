@@ -1,6 +1,6 @@
 {
   "name": "null-writable",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Null writable stream",
   "main": "lib/null-writable.js",
   "typings": "lib/null-writable.d.ts",
