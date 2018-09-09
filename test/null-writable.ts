@@ -1,20 +1,13 @@
-'use strict'
+import { And, Feature, Given, Scenario, Then, When } from './lib/steps'
 
-const t = require('tap')
-require('tap-given')(t)
+import NullWritable from '../src/null-writable'
 
-const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
-chai.use(chaiAsPromised)
-chai.should()
-
-const MyReadable = require('./lib/my-readable')
-const NullWritable = require('../lib/null-writable')
+import MyReadable from './lib/my-readable'
 
 Feature('Test null-writable module', () => {
   Scenario('Write a line to writable', () => {
     let canWrite = false
-    let writable
+    let writable: NullWritable
 
     Given('writable stream', () => {
       writable = new NullWritable()
@@ -31,7 +24,7 @@ Feature('Test null-writable module', () => {
 
   Scenario('Write more lines to writable', () => {
     let canWrite = false
-    let writable
+    let writable: NullWritable
 
     Given('writable stream', () => {
       writable = new NullWritable()
@@ -61,8 +54,8 @@ Feature('Test null-writable module', () => {
   Scenario('Pipe readable to writable', () => {
     let ended = false
     let finished = false
-    let readable
-    let writable
+    let readable: MyReadable
+    let writable: NullWritable
 
     Given('readable stream', () => {
       readable = new MyReadable({ name: 'readable', lines: 10 })
@@ -100,9 +93,9 @@ Feature('Test null-writable module', () => {
 
   Scenario('Pipe readable with error to writable', () => {
     let ended = false
-    let errored = false
-    let readable
-    let writable
+    let errored: Error
+    let readable: MyReadable
+    let writable: NullWritable
 
     Given('readable stream', () => {
       readable = new MyReadable({ name: 'readable', lines: 10, withError: true })

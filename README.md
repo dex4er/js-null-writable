@@ -12,7 +12,7 @@ It implements `_writev` method so it is fast enough for buffered operations.
 
 ## Requirements
 
-This module requires Node >= 4.
+This module requires Node >= 6.
 
 ## Installation
 
@@ -29,7 +29,7 @@ npm install -D @types/node
 ## Usage
 
 ```js
-const NullWritable = require('null-writable')
+const { NullWritable } = require('null-writable')
 ```
 
 _Typescript:_

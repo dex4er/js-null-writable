@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0 2018-09-09
+
+* Rewritten in Typescript.
+* Requires Node >= 6
+* Changed syntax for import.
+
 ## v0.3.0 2018-07-15
 
 * Do not export `default` symbol.

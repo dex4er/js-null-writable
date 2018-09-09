@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 
-import NullWritable from '../lib/null-writable'
+import NullWritable from '../src/null-writable'
 
 function main (): void {
   const filename = process.argv[1] || '/etc/hosts'
