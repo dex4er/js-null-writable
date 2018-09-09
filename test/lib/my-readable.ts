@@ -14,7 +14,7 @@ export default class MyReadable extends Readable {
   }
 
   _read (_size: number): void {
-    const lines = this.options.lines || 0
+    const lines = this.options.lines
 
     if (this.n >= lines) {
       if (this.options.withError) {

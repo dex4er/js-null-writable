@@ -107,6 +107,7 @@ Feature('Test null-writable module', () => {
 
     When('waiting for end event from readable', () => {
       readable.once('end', () => {
+        /* istanbul ignore next: should never be run */
         ended = true
       })
     })
