@@ -10,7 +10,6 @@ export default class MyReadable extends Readable {
   private n = 0
 
   constructor (private options: MyReadableOptions = {}) {
-    // options.highWaterMark = 5
     super(options)
   }
 

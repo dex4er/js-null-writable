@@ -38,6 +38,18 @@ _Typescript:_
 import NullWritable from 'null-writable'
 ```
 
+Transpiling this module with own settings in `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "null-writable": ["node_modules/null-writable/src/null-writable"]
+    }
+  }
+}
+```
+
 ### constructor
 
 ```js
