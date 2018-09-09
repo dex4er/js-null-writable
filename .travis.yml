@@ -19,4 +19,4 @@ script:
   - echo "--reporter dot --color" > test/mocha.opts
   - npm run build
   - $NYC npm run ${NPM_RUN_SCRIPT:-test:spec} -- ${MOCHA_ARGS}
-  - if [ -n "$NYC" ]; then nyc report; fi
+  - if [ -n "$NYC" ]; then nyc report --color; fi
