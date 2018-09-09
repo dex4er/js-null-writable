@@ -1,15 +1,15 @@
 import { Readable, ReadableOptions } from 'stream'
 
 interface MyReadableOptions extends ReadableOptions {
-  lines?: number
-  name?: string
+  lines: number
+  name: string
   withError?: boolean
 }
 
 export default class MyReadable extends Readable {
   private n = 0
 
-  constructor (private options: MyReadableOptions = {}) {
+  constructor (private options: MyReadableOptions) {
     super(options)
   }
 
