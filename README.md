@@ -26,18 +26,6 @@ _Additionally for Typescript:_
 npm install -D @types/node
 ```
 
-## Usage
-
-```js
-const { NullWritable } = require('null-writable')
-```
-
-_Typescript:_
-
-```ts
-import NullWritable from 'null-writable'
-```
-
 Transpiling this module with own settings in `tsconfig.json`:
 
 ```json
@@ -48,6 +36,18 @@ Transpiling this module with own settings in `tsconfig.json`:
     }
   }
 }
+```
+
+## Usage
+
+```js
+const { NullWritable } = require('null-writable')
+```
+
+_Typescript:_
+
+```ts
+import NullWritable from 'null-writable'
 ```
 
 ### constructor
