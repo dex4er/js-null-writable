@@ -31,10 +31,17 @@ Transpiling this module with own settings in `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
     "paths": {
       "null-writable": ["node_modules/null-writable/src/null-writable"]
-    }
-  }
+    },
+    "strict": true
+  },
+  "include": [
+    "*.ts",
+    "node_modules/null-writable/src/*.ts"
+  ]
 }
 ```
 
