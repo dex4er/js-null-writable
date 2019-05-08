@@ -1,4 +1,4 @@
-import { Readable, ReadableOptions } from 'stream'
+import {Readable, ReadableOptions} from 'stream'
 
 interface MyReadableOptions extends ReadableOptions {
   lines: number
@@ -9,11 +9,11 @@ interface MyReadableOptions extends ReadableOptions {
 export default class MyReadable extends Readable {
   private n = 0
 
-  constructor (private options: MyReadableOptions) {
+  constructor(private options: MyReadableOptions) {
     super(options)
   }
 
-  _read (_size: number): void {
+  _read(_size: number): void {
     const lines = this.options.lines
 
     if (this.n >= lines) {

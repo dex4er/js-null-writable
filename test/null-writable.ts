@@ -1,4 +1,4 @@
-import { And, Feature, Given, Scenario, Then, When } from './lib/steps'
+import {And, Feature, Given, Scenario, Then, When} from './lib/steps'
 
 import NullWritable from '../src/null-writable'
 
@@ -13,7 +13,7 @@ Feature('Test null-writable module', () => {
       writable = new NullWritable()
     })
 
-    When('I write one line to writable', (done) => {
+    When('I write one line to writable', done => {
       canWrite = writable.write('line\n', done)
     })
 
@@ -58,7 +58,7 @@ Feature('Test null-writable module', () => {
     let writable: NullWritable
 
     Given('readable stream', () => {
-      readable = new MyReadable({ name: 'readable', lines: 10 })
+      readable = new MyReadable({name: 'readable', lines: 10})
     })
 
     And('writable stream', () => {
@@ -77,7 +77,7 @@ Feature('Test null-writable module', () => {
       })
     })
 
-    And('readable is piped to writable', (done) => {
+    And('readable is piped to writable', done => {
       writable.once('finish', done)
       readable.pipe(writable)
     })
@@ -98,7 +98,7 @@ Feature('Test null-writable module', () => {
     let writable: NullWritable
 
     Given('readable stream', () => {
-      readable = new MyReadable({ name: 'readable', lines: 10, withError: true })
+      readable = new MyReadable({name: 'readable', lines: 10, withError: true})
     })
 
     And('writable stream', () => {
@@ -113,13 +113,13 @@ Feature('Test null-writable module', () => {
     })
 
     And('waiting for error event from readable', () => {
-      readable.once('error', (err) => {
+      readable.once('error', err => {
         errored = err
       })
     })
 
-    And('readable is piped to writable', (done) => {
-      readable.once('error', (_err) => done())
+    And('readable is piped to writable', done => {
+      readable.once('error', _err => done())
       readable.pipe(writable)
     })
 

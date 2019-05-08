@@ -2,9 +2,9 @@
 
 const fs = require('fs')
 
-const { NullWritable } = require('../lib/null-writable')
+const {NullWritable} = require('../lib/null-writable')
 
-function main () {
+function main() {
   const filename = process.argv[1] || '/etc/hosts'
   const readableStream = fs.createReadStream(filename)
 
