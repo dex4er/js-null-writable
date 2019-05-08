@@ -62,6 +62,6 @@ Options are the same as for `Writable` constructor, like ie. `highWaterMark`.
 
 ## License
 
-Copyright (c) 2018 Piotr Roszatycki <mailto:piotr.roszatycki@gmail.com>
+Copyright (c) 2018-2019 Piotr Roszatycki <mailto:piotr.roszatycki@gmail.com>
 
 [MIT](https://opensource.org/licenses/MIT)
