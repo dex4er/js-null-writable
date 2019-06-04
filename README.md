@@ -1,7 +1,9 @@
 # null-writable
 
 <!-- markdownlint-disable MD013 -->
+
 [![Build Status](https://secure.travis-ci.org/dex4er/js-null-writable.svg)](http://travis-ci.org/dex4er/js-null-writable) [![Coverage Status](https://coveralls.io/repos/github/dex4er/js-null-writable/badge.svg)](https://coveralls.io/github/dex4er/js-null-writable) [![npm](https://img.shields.io/npm/v/null-writable.svg)](https://www.npmjs.com/package/null-writable)
+
 <!-- markdownlint-enable MD013 -->
 
 This module provides a
@@ -38,23 +40,20 @@ Transpiling this module with own settings in `tsconfig.json`:
     },
     "strict": true
   },
-  "include": [
-    "*.ts",
-    "node_modules/null-writable/src/*.ts"
-  ]
+  "include": ["*.ts", "node_modules/null-writable/src/*.ts"]
 }
 ```
 
 ## Usage
 
 ```js
-const { NullWritable } = require('null-writable')
+const {NullWritable} = require("null-writable")
 ```
 
 _Typescript:_
 
 ```ts
-import NullWritable from 'null-writable'
+import NullWritable from "null-writable"
 ```
 
 ### constructor

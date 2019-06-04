@@ -1,1 +1,1 @@
-module.exports = require('./lib/null-writable')
+module.exports = require("./lib/null-writable")

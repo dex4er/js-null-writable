@@ -1,4 +1,4 @@
-import {Readable, ReadableOptions} from 'stream'
+import {Readable, ReadableOptions} from "stream"
 
 interface MyReadableOptions extends ReadableOptions {
   lines: number
@@ -18,7 +18,7 @@ export default class MyReadable extends Readable {
 
     if (this.n >= lines) {
       if (this.options.withError) {
-        process.nextTick(() => this.emit('error', new Error(this.options.name)))
+        process.nextTick(() => this.emit("error", new Error(this.options.name)))
       } else {
         this.push(null)
       }
