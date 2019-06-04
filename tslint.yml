@@ -2,7 +2,6 @@ extends:
   - tslint:recommended
   - tslint-config-prettier
 rules:
-  await-promise: [true, Promise, PromiseLike] # chai-as-promised
   curly: [true, ignore-same-line] # too strict
   interface-name: false # don't like hungarian notation
   max-line-length: false # prettier will handle it

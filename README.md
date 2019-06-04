@@ -28,22 +28,6 @@ _Additionally for Typescript:_
 npm install -D @types/node
 ```
 
-Transpiling this module with own settings in `tsconfig.json`:
-
-```json
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "paths": {
-      "null-writable": ["node_modules/null-writable/src/null-writable"]
-    },
-    "strict": true
-  },
-  "include": ["*.ts", "node_modules/null-writable/src/*.ts"]
-}
-```
-
 ## Usage
 
 ```js
@@ -54,6 +38,8 @@ _Typescript:_
 
 ```ts
 import NullWritable from "null-writable"
+// or
+import {NullWritable} from "null-writable"
 ```
 
 ### constructor
