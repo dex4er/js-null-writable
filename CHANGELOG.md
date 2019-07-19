@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3 2019-07-19
+
+- Updated dependencies.
+
 ## v1.0.2 2019-06-04
 
 - Minor tweaks in README.
