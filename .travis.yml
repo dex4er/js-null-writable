@@ -12,6 +12,7 @@ matrix:
 
 install:
   - set -e
+  - if [ -n "$NPM_AUDIT" ]; then npm audit fix; fi
   - npm install
   - if [ -n "$NPM_AUDIT" ]; then npm audit; fi
 
