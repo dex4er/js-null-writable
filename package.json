@@ -60,7 +60,7 @@
     "prepublishOnly": "npm run test",
     "pretest": "npm run lint",
     "test": "npm run test:spec",
-    "test:spec": "$NYC mocha -- \"test/*.ts\"",
+    "test:spec": "$NYC mocha \"test/*.ts\"",
     "test:coverage": "npm run clean:coverage && cross-env NYC=\"nyc --no-clean --reporter=lcov\" npm run test:spec && nyc report --reporter=text-summary --color"
   }
 }
