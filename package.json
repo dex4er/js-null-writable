@@ -21,7 +21,7 @@
   },
   "homepage": "http://github.com/dex4er/js-null-writable",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=v14.18.1"
   },
   "dependencies": {},
   "devDependencies": {
