@@ -27,8 +27,8 @@
   "devDependencies": {
     "@types/chai": "^4.2.3",
     "@types/dirty-chai": "^2.0.2",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.11",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.8",
     "chai": "^4.2.0",
     "coveralls": "^3.0.6",
     "cross-env": "^6.0.3",
