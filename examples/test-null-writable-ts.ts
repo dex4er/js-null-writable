@@ -1,8 +1,8 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env -S node --experimental-specifier-resolution=node --no-warnings --loader ts-node/esm
 
-import fs from "fs"
+import * as fs from "node:fs"
 
-import NullWritable from "../src/null-writable"
+import NullWritable from "../src/null-writable.js"
 
 function main(): void {
   const filename = process.argv[1] || "/etc/hosts"

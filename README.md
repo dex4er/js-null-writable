@@ -2,7 +2,11 @@
 
 <!-- markdownlint-disable MD013 -->
 
-[![Build Status](https://secure.travis-ci.org/dex4er/js-null-writable.svg)](http://travis-ci.org/dex4er/js-null-writable) [![Coverage Status](https://coveralls.io/repos/github/dex4er/js-null-writable/badge.svg)](https://coveralls.io/github/dex4er/js-null-writable) [![npm](https://img.shields.io/npm/v/null-writable.svg)](https://www.npmjs.com/package/null-writable)
+[![GitHub](https://img.shields.io/github/v/release/dex4er/js-null-writable?display_name=tag&sort=semver)](https://github.com/dex4er/js-null-writable)
+[![CI](https://github.com/dex4er/js-null-writable/actions/workflows/ci.yaml/badge.svg)](https://github.com/dex4er/js-null-writable/actions/workflows/ci.yaml)
+[![Trunk Check](https://github.com/dex4er/js-null-writable/actions/workflows/trunk.yaml/badge.svg)](https://github.com/dex4er/js-null-writable/actions/workflows/trunk.yaml)
+[![Coverage Status](https://coveralls.io/repos/github/dex4er/js-null-writable/badge.svg)](https://coveralls.io/github/dex4er/js-null-writable)
+[![npm](https://img.shields.io/npm/v/null-writable.svg)](https://www.npmjs.com/package/null-writable)
 
 <!-- markdownlint-enable MD013 -->
 
@@ -14,7 +18,7 @@ It implements `_writev` method so it is fast enough for buffered operations.
 
 ## Requirements
 
-This module requires Node >= 6.
+This module requires Node >= 16.
 
 ## Installation
 
@@ -31,12 +35,6 @@ npm install -D @types/node
 ## Usage
 
 ```js
-const {NullWritable} = require("null-writable")
-```
-
-_Typescript:_
-
-```ts
 import NullWritable from "null-writable"
 // or
 import {NullWritable} from "null-writable"
@@ -44,16 +42,12 @@ import {NullWritable} from "null-writable"
 
 ### constructor
 
-```js
-const stream = new NullWritable(options)
-```
-
-Create new `NullWritable` instance.
+Create a new `NullWritable` instance.
 
 Options are the same as for `Writable` constructor, like ie. `highWaterMark`.
 
 ## License
 
-Copyright (c) 2018-2019 Piotr Roszatycki <mailto:piotr.roszatycki@gmail.com>
+Copyright (c) 2018-2024 Piotr Roszatycki <mailto:piotr.roszatycki@gmail.com>
 
 [MIT](https://opensource.org/licenses/MIT)

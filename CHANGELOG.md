@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.0 2024-06-25
+
+- Converted to ESM module.
+- Requires Node >= 16.
+
 ## v1.0.5 2019-10-07
 
 - Use `mocha-steps` for testing.

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require("fs")
+import * as fs from "node:fs"
 
-const {NullWritable} = require("../lib/null-writable")
+import NullWritable from "../lib/null-writable.js"
 
 function main() {
   const filename = process.argv[1] || "/etc/hosts"

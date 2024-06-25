@@ -1,13 +1,10 @@
-import chai, {expect} from "chai"
+import {expect} from "chai"
 
-import dirtyChai from "dirty-chai"
-chai.use(dirtyChai)
+import {And, Feature, Given, Scenario, Then, When} from "./lib/steps.js"
 
-import {And, Feature, Given, Scenario, Then, When} from "./lib/steps"
+import NullWritable from "../src/null-writable.js"
 
-import NullWritable from "../src/null-writable"
-
-import MyReadable from "./lib/my-readable"
+import MyReadable from "./lib/my-readable.js"
 
 Feature("Test null-writable module", () => {
   Scenario("Write a line to writable", () => {
@@ -23,7 +20,7 @@ Feature("Test null-writable module", () => {
     })
 
     Then("still can write to stream", () => {
-      expect(canWrite).to.be.true()
+      expect(canWrite).to.be.true
     })
   })
 
@@ -52,7 +49,7 @@ Feature("Test null-writable module", () => {
     })
 
     Then("still can write to stream", () => {
-      expect(canWrite).to.be.true()
+      expect(canWrite).to.be.true
     })
   })
 
@@ -88,11 +85,11 @@ Feature("Test null-writable module", () => {
     })
 
     Then("readable is ended", () => {
-      expect(ended).to.be.true()
+      expect(ended).to.be.true
     })
 
     And("writable is ended", () => {
-      expect(finished).to.be.true()
+      expect(finished).to.be.true
     })
   })
 
@@ -129,7 +126,7 @@ Feature("Test null-writable module", () => {
     })
 
     Then("readable is not ended", () => {
-      expect(ended).to.be.false()
+      expect(ended).to.be.false
     })
 
     And("writable is ended", () => {

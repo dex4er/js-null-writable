@@ -1,7 +1,14 @@
 {
   "name": "null-writable",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Null writable stream",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./lib/null-writable.js",
+      "typings": "./lib/null-writable.d.ts"
+    }
+  },
   "main": "lib/null-writable.js",
   "typings": "lib/null-writable.d.ts",
   "repository": {
@@ -21,46 +28,53 @@
   },
   "homepage": "http://github.com/dex4er/js-null-writable",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.2.3",
-    "@types/dirty-chai": "^2.0.2",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.11",
-    "chai": "^4.2.0",
-    "coveralls": "^3.0.6",
-    "cross-env": "^6.0.3",
-    "dirty-chai": "^2.0.1",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "markdownlint-cli": "^0.18.0",
-    "mocha": "^6.2.1",
+    "@eslint/js": "^9.5.0",
+    "@tsconfig/node16": "^16.1.3",
+    "@types/chai": "^4.3.16",
+    "@types/eslint__js": "^8.42.3",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.8",
+    "@types/semver": "^7.5.8",
+    "@typescript-eslint/parser": "^7.14.1",
+    "c8": "^10.1.2",
+    "chai": "^5.1.1",
+    "coveralls": "^3.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "markdownlint-cli": "^0.41.0",
+    "mocha": "^10.5.1",
     "mocha-steps": "^1.3.0",
-    "nyc": "^14.1.1",
-    "prettier": "^1.18.2",
-    "shx": "^0.3.2",
-    "ts-node": "^8.4.1",
-    "tslint": "^5.20.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.3"
+    "prettier": "^3.3.2",
+    "semver": "^7.6.2",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^7.14.1"
   },
   "scripts": {
     "compile": "tsc --pretty --project .",
     "clean": "npm run clean:compile && npm run clean:coverage",
     "clean:compile": "shx rm -rf lib",
     "clean:coverage": "shx rm -rf coverage .nyc_output",
-    "lint": "npm run compile && tsc --pretty -p examples && tsc --pretty -p test && eslint . && tslint -t stylish -p . && tslint -t stylish -p examples && tslint -t stylish -p test && prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,ts,yml}' && markdownlint \"*.md\"",
-    "postpublish": "git tag v$npm_package_version -a -m \"Release v$npm_package_version\" && git push --tags",
+    "lint": "npm run lint:tsc:src && npm run lint:tsc:test && npm run lint:tsc:examples && npm run lint:eslint && npm run lint:prettier && npm run lint:markdownlint",
+    "lint:tsc:examples": "tsc --noEmit --pretty --project examples",
+    "lint:tsc:src": "tsc --noEmit --pretty --project .",
+    "lint:tsc:test": "tsc --noEmit --pretty --project test",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,ts,yml}'",
+    "lint:markdownlint": "markdownlint \"*.md\"",
     "prepack": "npm run compile",
     "prepublishOnly": "npm run test",
     "pretest": "npm run lint",
     "test": "npm run test:spec",
-    "test:spec": "$NYC mocha \"test/*.ts\"",
-    "test:coverage": "npm run clean:coverage && cross-env NYC=\"nyc --no-clean --reporter=lcov\" npm run test:spec && nyc report --reporter=text-summary --color"
+    "test:spec": "mocha",
+    "test:coverage": "npm run test:coverage:spec && npm run test:coverage:report",
+    "test:coverage:spec": "c8 --no-clean --reporter=lcov npm run test:spec",
+    "test:coverage:report": "c8 report --reporter=text-summary --color"
   }
 }
