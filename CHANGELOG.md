@@ -3,6 +3,7 @@
 ## v2.0.1 2024-09-18
 
 - Changed type for encoding from `string` to `BufferEncoding`. Fixes #64.
+- Updated dependencies. Uses eslint@9.
 
 ## v2.0.0 2024-06-25
 

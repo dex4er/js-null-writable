@@ -20,6 +20,7 @@ Feature("Test null-writable module", () => {
     })
 
     Then("still can write to stream", () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(canWrite).to.be.true
     })
   })
@@ -49,6 +50,7 @@ Feature("Test null-writable module", () => {
     })
 
     Then("still can write to stream", () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(canWrite).to.be.true
     })
   })
@@ -85,10 +87,12 @@ Feature("Test null-writable module", () => {
     })
 
     Then("readable is ended", () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(ended).to.be.true
     })
 
     And("writable is ended", () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(finished).to.be.true
     })
   })
@@ -126,6 +130,7 @@ Feature("Test null-writable module", () => {
     })
 
     Then("readable is not ended", () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       expect(ended).to.be.false
     })
 
