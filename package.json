@@ -5,8 +5,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "default": "./lib/null-writable.js",
-      "typings": "./lib/null-writable.d.ts"
+      "typings": "./lib/null-writable.d.ts",
+      "default": "./lib/null-writable.js"
     }
   },
   "main": "lib/null-writable.js",
